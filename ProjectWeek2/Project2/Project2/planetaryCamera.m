@@ -20,6 +20,7 @@
         [self setTotalExposureTimeSeconds:1];
         [self setImagingType:@"Monochrome"];
         [self setFiltersNeeded:3];
+        [self setFilterChangeTime:60];
     }
     return self;
 }
@@ -27,7 +28,7 @@
 // calculate exposure time method here
 -(int)calculateTotalExposureTime
 {
-    [self setTotalExposureTimeSeconds:(self.exposureTimeSeconds * self.filtersNeeded)];
+    [self setTotalExposureTimeSeconds:(self.exposureTimeSeconds * self.filtersNeeded) + self.filterChangeTime];
     return [self totalExposureTimeSeconds];
 }
 @end

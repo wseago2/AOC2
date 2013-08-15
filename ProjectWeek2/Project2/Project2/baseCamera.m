@@ -15,6 +15,7 @@
 @synthesize totalExposureTimeSeconds;
 @synthesize imagingType;
 @synthesize filtersNeeded;
+@synthesize filterChangeTime;
 
 // init method here
 -(id)initWithDetails:(int)exposureTimeSeconds imagingType:(NSString *)imagingType
@@ -26,6 +27,7 @@
         [self setTotalExposureTimeSeconds:0];
         [self setImagingType:nil];
         [self setFiltersNeeded:1];
+        [self setFilterChangeTime:0];
     }
     return self;
 }

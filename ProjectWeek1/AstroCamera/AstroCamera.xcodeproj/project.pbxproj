@@ -328,6 +328,7 @@
 				3F1C9B7717B5A36B00CD5C88 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

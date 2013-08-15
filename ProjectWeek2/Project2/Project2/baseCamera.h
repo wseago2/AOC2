@@ -26,6 +26,8 @@ typedef enum
 @property int totalExposureTimeSeconds;
 @property(nonatomic, strong) NSString *imagingType;
 @property int filtersNeeded;
+@property int filterChangeTime;
+
 
 
 // init method here

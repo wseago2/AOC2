@@ -20,6 +20,7 @@
         [self setTotalExposureTimeSeconds:1];
         [self setImagingType:@"One Shot Color"];
         [self setFiltersNeeded:1];
+        [self setFilterChangeTime:0];
     }
     return self;
 }
