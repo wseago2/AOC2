@@ -10,6 +10,7 @@
 
 @interface ViewController : UIViewController
 {
+// setup Outlets
     IBOutlet UIButton *planetButton;
     IBOutlet UIButton *deepSkyButton;
     IBOutlet UIButton *slrButton;
@@ -17,7 +18,7 @@
     IBOutlet UILabel *stepperLabel;
     IBOutlet UITextField *results;
 }
-
+// setup Actions
 -(IBAction)onInfo:(id)sender;
 -(IBAction)onColorChange:(id)sender;
 -(IBAction)onStepperChange:(id)sender;

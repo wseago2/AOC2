@@ -44,6 +44,8 @@
             results.text = @"SLR Camera Selected";
             NSLog(@"You clicked the SLR Camera Button!");
         }
+        // allow keyboard to be hidden
+        [results resignFirstResponder];
     }
 }
 
@@ -130,6 +132,9 @@
 
 - (void)viewDidLoad
 {
+    // set initial background color
+    self.view.backgroundColor = [UIColor lightGrayColor];
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
