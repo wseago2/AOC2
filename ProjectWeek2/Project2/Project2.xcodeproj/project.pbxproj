@@ -1,0 +1,359 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3F6B793117BAD505004CDCA1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F6B793017BAD505004CDCA1 /* UIKit.framework */; };
+		3F6B793317BAD505004CDCA1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F6B793217BAD505004CDCA1 /* Foundation.framework */; };
+		3F6B793517BAD505004CDCA1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F6B793417BAD505004CDCA1 /* CoreGraphics.framework */; };
+		3F6B793B17BAD505004CDCA1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3F6B793917BAD505004CDCA1 /* InfoPlist.strings */; };
+		3F6B793D17BAD505004CDCA1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6B793C17BAD505004CDCA1 /* main.m */; };
+		3F6B794117BAD505004CDCA1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6B794017BAD505004CDCA1 /* AppDelegate.m */; };
+		3F6B794317BAD505004CDCA1 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F6B794217BAD505004CDCA1 /* Default.png */; };
+		3F6B794517BAD505004CDCA1 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F6B794417BAD505004CDCA1 /* Default@2x.png */; };
+		3F6B794717BAD505004CDCA1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3F6B794617BAD505004CDCA1 /* Default-568h@2x.png */; };
+		3F6B794A17BAD505004CDCA1 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6B794917BAD505004CDCA1 /* ViewController.m */; };
+		3F6B794D17BAD505004CDCA1 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F6B794B17BAD505004CDCA1 /* ViewController.xib */; };
+		3F6B795617BAD591004CDCA1 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6B795417BAD591004CDCA1 /* SecondViewController.m */; };
+		3F6B795717BAD591004CDCA1 /* SecondViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3F6B795517BAD591004CDCA1 /* SecondViewController.xib */; };
+		3F6B795917BAE3B7004CDCA1 /* deepSky.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3F6B795817BAE3B7004CDCA1 /* deepSky.jpeg */; };
+		3F6B795B17BAE3C2004CDCA1 /* planetary.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3F6B795A17BAE3C2004CDCA1 /* planetary.jpeg */; };
+		3F6B795D17BAE3CF004CDCA1 /* slr.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 3F6B795C17BAE3CF004CDCA1 /* slr.jpeg */; };
+		3F6B796017BAEA06004CDCA1 /* baseCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6B795F17BAEA06004CDCA1 /* baseCamera.m */; };
+		3F6B796317BAEA23004CDCA1 /* cameraFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6B796217BAEA23004CDCA1 /* cameraFactory.m */; };
+		3F6B796617BAEA43004CDCA1 /* planetaryCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6B796517BAEA43004CDCA1 /* planetaryCamera.m */; };
+		3F6B796917BAEA5B004CDCA1 /* deepSkyCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6B796817BAEA5B004CDCA1 /* deepSkyCamera.m */; };
+		3F6B796C17BAEA7C004CDCA1 /* slrCamera.m in Sources */ = {isa = PBXBuildFile; fileRef = 3F6B796B17BAEA7C004CDCA1 /* slrCamera.m */; };
+		3F6B796E17BB15E6004CDCA1 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3F6B796D17BB15E5004CDCA1 /* MessageUI.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3F6B792D17BAD505004CDCA1 /* Project2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Project2.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F6B793017BAD505004CDCA1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		3F6B793217BAD505004CDCA1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		3F6B793417BAD505004CDCA1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		3F6B793817BAD505004CDCA1 /* Project2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Project2-Info.plist"; sourceTree = "<group>"; };
+		3F6B793A17BAD505004CDCA1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		3F6B793C17BAD505004CDCA1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3F6B793E17BAD505004CDCA1 /* Project2-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Project2-Prefix.pch"; sourceTree = "<group>"; };
+		3F6B793F17BAD505004CDCA1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3F6B794017BAD505004CDCA1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3F6B794217BAD505004CDCA1 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		3F6B794417BAD505004CDCA1 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		3F6B794617BAD505004CDCA1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		3F6B794817BAD505004CDCA1 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3F6B794917BAD505004CDCA1 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3F6B794C17BAD505004CDCA1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		3F6B795317BAD591004CDCA1 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		3F6B795417BAD591004CDCA1 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
+		3F6B795517BAD591004CDCA1 /* SecondViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondViewController.xib; sourceTree = "<group>"; };
+		3F6B795817BAE3B7004CDCA1 /* deepSky.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = deepSky.jpeg; sourceTree = "<group>"; };
+		3F6B795A17BAE3C2004CDCA1 /* planetary.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = planetary.jpeg; sourceTree = "<group>"; };
+		3F6B795C17BAE3CF004CDCA1 /* slr.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = slr.jpeg; sourceTree = "<group>"; };
+		3F6B795E17BAEA06004CDCA1 /* baseCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = baseCamera.h; sourceTree = "<group>"; };
+		3F6B795F17BAEA06004CDCA1 /* baseCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = baseCamera.m; sourceTree = "<group>"; };
+		3F6B796117BAEA23004CDCA1 /* cameraFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = cameraFactory.h; sourceTree = "<group>"; };
+		3F6B796217BAEA23004CDCA1 /* cameraFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = cameraFactory.m; sourceTree = "<group>"; };
+		3F6B796417BAEA43004CDCA1 /* planetaryCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = planetaryCamera.h; sourceTree = "<group>"; };
+		3F6B796517BAEA43004CDCA1 /* planetaryCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = planetaryCamera.m; sourceTree = "<group>"; };
+		3F6B796717BAEA5B004CDCA1 /* deepSkyCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = deepSkyCamera.h; sourceTree = "<group>"; };
+		3F6B796817BAEA5B004CDCA1 /* deepSkyCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = deepSkyCamera.m; sourceTree = "<group>"; };
+		3F6B796A17BAEA7C004CDCA1 /* slrCamera.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = slrCamera.h; sourceTree = "<group>"; };
+		3F6B796B17BAEA7C004CDCA1 /* slrCamera.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = slrCamera.m; sourceTree = "<group>"; };
+		3F6B796D17BB15E5004CDCA1 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3F6B792A17BAD505004CDCA1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F6B796E17BB15E6004CDCA1 /* MessageUI.framework in Frameworks */,
+				3F6B793117BAD505004CDCA1 /* UIKit.framework in Frameworks */,
+				3F6B793317BAD505004CDCA1 /* Foundation.framework in Frameworks */,
+				3F6B793517BAD505004CDCA1 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3F6B792417BAD505004CDCA1 = {
+			isa = PBXGroup;
+			children = (
+				3F6B796D17BB15E5004CDCA1 /* MessageUI.framework */,
+				3F6B793617BAD505004CDCA1 /* Project2 */,
+				3F6B792F17BAD505004CDCA1 /* Frameworks */,
+				3F6B792E17BAD505004CDCA1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3F6B792E17BAD505004CDCA1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3F6B792D17BAD505004CDCA1 /* Project2.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3F6B792F17BAD505004CDCA1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3F6B793017BAD505004CDCA1 /* UIKit.framework */,
+				3F6B793217BAD505004CDCA1 /* Foundation.framework */,
+				3F6B793417BAD505004CDCA1 /* CoreGraphics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3F6B793617BAD505004CDCA1 /* Project2 */ = {
+			isa = PBXGroup;
+			children = (
+				3F6B795C17BAE3CF004CDCA1 /* slr.jpeg */,
+				3F6B795A17BAE3C2004CDCA1 /* planetary.jpeg */,
+				3F6B795817BAE3B7004CDCA1 /* deepSky.jpeg */,
+				3F6B793F17BAD505004CDCA1 /* AppDelegate.h */,
+				3F6B794017BAD505004CDCA1 /* AppDelegate.m */,
+				3F6B794817BAD505004CDCA1 /* ViewController.h */,
+				3F6B794917BAD505004CDCA1 /* ViewController.m */,
+				3F6B794B17BAD505004CDCA1 /* ViewController.xib */,
+				3F6B793717BAD505004CDCA1 /* Supporting Files */,
+				3F6B795317BAD591004CDCA1 /* SecondViewController.h */,
+				3F6B795417BAD591004CDCA1 /* SecondViewController.m */,
+				3F6B795517BAD591004CDCA1 /* SecondViewController.xib */,
+				3F6B795E17BAEA06004CDCA1 /* baseCamera.h */,
+				3F6B795F17BAEA06004CDCA1 /* baseCamera.m */,
+				3F6B796117BAEA23004CDCA1 /* cameraFactory.h */,
+				3F6B796217BAEA23004CDCA1 /* cameraFactory.m */,
+				3F6B796417BAEA43004CDCA1 /* planetaryCamera.h */,
+				3F6B796517BAEA43004CDCA1 /* planetaryCamera.m */,
+				3F6B796717BAEA5B004CDCA1 /* deepSkyCamera.h */,
+				3F6B796817BAEA5B004CDCA1 /* deepSkyCamera.m */,
+				3F6B796A17BAEA7C004CDCA1 /* slrCamera.h */,
+				3F6B796B17BAEA7C004CDCA1 /* slrCamera.m */,
+			);
+			path = Project2;
+			sourceTree = "<group>";
+		};
+		3F6B793717BAD505004CDCA1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3F6B793817BAD505004CDCA1 /* Project2-Info.plist */,
+				3F6B793917BAD505004CDCA1 /* InfoPlist.strings */,
+				3F6B793C17BAD505004CDCA1 /* main.m */,
+				3F6B793E17BAD505004CDCA1 /* Project2-Prefix.pch */,
+				3F6B794217BAD505004CDCA1 /* Default.png */,
+				3F6B794417BAD505004CDCA1 /* Default@2x.png */,
+				3F6B794617BAD505004CDCA1 /* Default-568h@2x.png */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3F6B792C17BAD505004CDCA1 /* Project2 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3F6B795017BAD505004CDCA1 /* Build configuration list for PBXNativeTarget "Project2" */;
+			buildPhases = (
+				3F6B792917BAD505004CDCA1 /* Sources */,
+				3F6B792A17BAD505004CDCA1 /* Frameworks */,
+				3F6B792B17BAD505004CDCA1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Project2;
+			productName = Project2;
+			productReference = 3F6B792D17BAD505004CDCA1 /* Project2.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3F6B792517BAD505004CDCA1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Wesley Seago";
+			};
+			buildConfigurationList = 3F6B792817BAD505004CDCA1 /* Build configuration list for PBXProject "Project2" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3F6B792417BAD505004CDCA1;
+			productRefGroup = 3F6B792E17BAD505004CDCA1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3F6B792C17BAD505004CDCA1 /* Project2 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3F6B792B17BAD505004CDCA1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F6B793B17BAD505004CDCA1 /* InfoPlist.strings in Resources */,
+				3F6B794317BAD505004CDCA1 /* Default.png in Resources */,
+				3F6B794517BAD505004CDCA1 /* Default@2x.png in Resources */,
+				3F6B794717BAD505004CDCA1 /* Default-568h@2x.png in Resources */,
+				3F6B794D17BAD505004CDCA1 /* ViewController.xib in Resources */,
+				3F6B795717BAD591004CDCA1 /* SecondViewController.xib in Resources */,
+				3F6B795917BAE3B7004CDCA1 /* deepSky.jpeg in Resources */,
+				3F6B795B17BAE3C2004CDCA1 /* planetary.jpeg in Resources */,
+				3F6B795D17BAE3CF004CDCA1 /* slr.jpeg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3F6B792917BAD505004CDCA1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F6B793D17BAD505004CDCA1 /* main.m in Sources */,
+				3F6B794117BAD505004CDCA1 /* AppDelegate.m in Sources */,
+				3F6B794A17BAD505004CDCA1 /* ViewController.m in Sources */,
+				3F6B795617BAD591004CDCA1 /* SecondViewController.m in Sources */,
+				3F6B796017BAEA06004CDCA1 /* baseCamera.m in Sources */,
+				3F6B796317BAEA23004CDCA1 /* cameraFactory.m in Sources */,
+				3F6B796617BAEA43004CDCA1 /* planetaryCamera.m in Sources */,
+				3F6B796917BAEA5B004CDCA1 /* deepSkyCamera.m in Sources */,
+				3F6B796C17BAEA7C004CDCA1 /* slrCamera.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		3F6B793917BAD505004CDCA1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F6B793A17BAD505004CDCA1 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		3F6B794B17BAD505004CDCA1 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3F6B794C17BAD505004CDCA1 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3F6B794E17BAD505004CDCA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3F6B794F17BAD505004CDCA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3F6B795117BAD505004CDCA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Project2/Project2-Prefix.pch";
+				INFOPLIST_FILE = "Project2/Project2-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		3F6B795217BAD505004CDCA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Project2/Project2-Prefix.pch";
+				INFOPLIST_FILE = "Project2/Project2-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3F6B792817BAD505004CDCA1 /* Build configuration list for PBXProject "Project2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F6B794E17BAD505004CDCA1 /* Debug */,
+				3F6B794F17BAD505004CDCA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3F6B795017BAD505004CDCA1 /* Build configuration list for PBXNativeTarget "Project2" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3F6B795117BAD505004CDCA1 /* Debug */,
+				3F6B795217BAD505004CDCA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3F6B792517BAD505004CDCA1 /* Project object */;
+}
