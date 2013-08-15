@@ -27,18 +27,21 @@
             planetButton.enabled = FALSE;
             deepSkyButton.enabled = TRUE;
             slrButton.enabled = TRUE;
+            results.text = @"Planetary Camera Selected";
             NSLog(@"You clicked the Planetary Camera Button!");
         } else if (button.tag == 1)
         {
             planetButton.enabled = TRUE;
             deepSkyButton.enabled = FALSE;
             slrButton.enabled = TRUE;
+            results.text = @"Deep Sky Camera Selected";
             NSLog(@"You clicked the Deep Sky Camera Button!");
         } else if (button.tag == 2)
         {
             planetButton.enabled = TRUE;
             deepSkyButton.enabled = TRUE;
             slrButton.enabled = FALSE;
+            results.text = @"SLR Camera Selected";
             NSLog(@"You clicked the SLR Camera Button!");
         }
     }
@@ -79,6 +82,49 @@
     {
         int currentValue = stepControl.value;
         stepperLabel.text = [NSString stringWithFormat:@"Qty of Photos %d", currentValue];
+        NSLog(@"You clicked the stepper control.");
+        // NSLog(@"The stepper control value is %d.", currentValue);
+    }
+}
+
+// calculate button method
+-(IBAction)onCalculate:(id)sender
+{
+    NSLog(@"You clicked the calculate button.");
+    
+    int stepperValue = stepperControl.value;
+    int totalImagingTimeSeconds;
+    
+    if (planetButton.enabled != TRUE)
+    {
+        baseCamera *planet = [cameraFactory createNewCamera:PLANETARY];
+        NSLog(@"You created a planetary camera.");
+        [planet calculateTotalExposureTime];
+        NSLog(@"Planet Total Exposure Time = %i.", planet.totalExposureTimeSeconds);
+        NSLog(@"Stepper Value = %i.", stepperValue);
+        totalImagingTimeSeconds = (planet.totalExposureTimeSeconds * stepperValue);
+        NSLog(@"Total Imaging Time = %i.", totalImagingTimeSeconds);
+        results.text = [NSString stringWithFormat:@"Total Imaging Time = %d Seconds.", totalImagingTimeSeconds];
+    }
+    else if (deepSkyButton.enabled != TRUE)
+    {
+        baseCamera *deepSky = [cameraFactory createNewCamera:DEEPSKY];
+        NSLog(@"You created a Deep Sky camera.");
+        [deepSky calculateTotalExposureTime];
+        totalImagingTimeSeconds = (deepSky.totalExposureTimeSeconds * stepperValue);
+        results.text = [NSString stringWithFormat:@"Total Imaging Time = %d Seconds.", totalImagingTimeSeconds];
+    }
+    else if (slrButton.enabled != TRUE)
+    {
+        baseCamera *slr = [cameraFactory createNewCamera:SLR];
+        NSLog(@"You created an SLR camera.");
+        [slr calculateTotalExposureTime];
+        totalImagingTimeSeconds = (slr.totalExposureTimeSeconds * stepperValue);
+        results.text = [NSString stringWithFormat:@"Total Imaging Time = %d Seconds.", totalImagingTimeSeconds];
+    }
+    else
+    {
+        results.text = @"Please select a camera type.";
     }
 }
 
@@ -105,6 +151,7 @@
 
 - (void)dealloc {
     [stepperControl release];
+    [results release];
     [super dealloc];
 }
 @end

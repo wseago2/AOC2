@@ -10,4 +10,24 @@
 
 @implementation planetaryCamera
 
+// init method here
+-(id)initWithDetails:(int)exposureTimeSeconds imagingType:(NSString *)imagingType
+{
+    self = [super init];
+    if (self != nil)
+    {
+        [self setExposureTimeSeconds:60];
+        [self setTotalExposureTimeSeconds:1];
+        [self setImagingType:@"Monochrome"];
+        [self setFiltersNeeded:3];
+    }
+    return self;
+}
+
+// calculate exposure time method here
+-(int)calculateTotalExposureTime
+{
+    [self setTotalExposureTimeSeconds:(self.exposureTimeSeconds * self.filtersNeeded)];
+    return [self totalExposureTimeSeconds];
+}
 @end

@@ -30,6 +30,7 @@ typedef enum
 
 // init method here
 -(id)initWithDetails:(int)exposureTimeSeconds imagingType:(NSString*)imagingType;
+//-(id)initWithDetails;
 
 // calculation method here
 -(int)calculateTotalExposureTime;

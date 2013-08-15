@@ -10,4 +10,9 @@
 
 @interface planetaryCamera : baseCamera
 
+// set properties here
+
+// declare method here
+-(int)calculateTotalExposureTime;
+
 @end

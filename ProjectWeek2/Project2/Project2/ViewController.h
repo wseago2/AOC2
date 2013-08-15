@@ -15,12 +15,14 @@
     IBOutlet UIButton *slrButton;
     IBOutlet UIStepper *stepperControl;
     IBOutlet UILabel *stepperLabel;
+    IBOutlet UITextField *results;
 }
 
 -(IBAction)onInfo:(id)sender;
 -(IBAction)onColorChange:(id)sender;
 -(IBAction)onStepperChange:(id)sender;
 -(IBAction)onClick:(id)sender;
+-(IBAction)onCalculate:(id)sender;
 
 
 @end

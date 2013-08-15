@@ -33,9 +33,8 @@
 // base calculation method here
 -(int)calculateTotalExposureTime
 {
-    [self setTotalExposureTimeSeconds:(self.exposureTimeSeconds * self.filtersNeeded)];
-    return totalExposureTimeSeconds;
     NSLog(@"Total exposure time = %i", totalExposureTimeSeconds);
+    return totalExposureTimeSeconds;
 }
 
 @end
