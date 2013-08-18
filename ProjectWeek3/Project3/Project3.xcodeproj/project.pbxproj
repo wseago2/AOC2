@@ -18,6 +18,8 @@
 		3FBAF14C17C14474009F4094 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3FBAF14B17C14474009F4094 /* Default-568h@2x.png */; };
 		3FBAF14F17C14474009F4094 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FBAF14E17C14474009F4094 /* ViewController.m */; };
 		3FBAF15217C14474009F4094 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FBAF15017C14474009F4094 /* ViewController.xib */; };
+		3FBAF15917C14660009F4094 /* AddEventView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3FBAF15817C14660009F4094 /* AddEventView.xib */; };
+		3FBAF15C17C14C4F009F4094 /* AddEventViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3FBAF15B17C14C4F009F4094 /* AddEventViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,9 @@
 		3FBAF14D17C14474009F4094 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		3FBAF14E17C14474009F4094 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3FBAF15117C14474009F4094 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		3FBAF15817C14660009F4094 /* AddEventView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddEventView.xib; sourceTree = "<group>"; };
+		3FBAF15A17C14C4F009F4094 /* AddEventViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddEventViewController.h; sourceTree = "<group>"; };
+		3FBAF15B17C14C4F009F4094 /* AddEventViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddEventViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +94,9 @@
 				3FBAF14E17C14474009F4094 /* ViewController.m */,
 				3FBAF15017C14474009F4094 /* ViewController.xib */,
 				3FBAF13C17C14474009F4094 /* Supporting Files */,
+				3FBAF15817C14660009F4094 /* AddEventView.xib */,
+				3FBAF15A17C14C4F009F4094 /* AddEventViewController.h */,
+				3FBAF15B17C14C4F009F4094 /* AddEventViewController.m */,
 			);
 			path = Project3;
 			sourceTree = "<group>";
@@ -163,6 +171,7 @@
 				3FBAF14A17C14474009F4094 /* Default@2x.png in Resources */,
 				3FBAF14C17C14474009F4094 /* Default-568h@2x.png in Resources */,
 				3FBAF15217C14474009F4094 /* ViewController.xib in Resources */,
+				3FBAF15917C14660009F4094 /* AddEventView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +185,7 @@
 				3FBAF14217C14474009F4094 /* main.m in Sources */,
 				3FBAF14617C14474009F4094 /* AppDelegate.m in Sources */,
 				3FBAF14F17C14474009F4094 /* ViewController.m in Sources */,
+				3FBAF15C17C14C4F009F4094 /* AddEventViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -261,6 +271,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Project3/Project3-Prefix.pch";
 				INFOPLIST_FILE = "Project3/Project3-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -272,6 +283,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Project3/Project3-Prefix.pch";
 				INFOPLIST_FILE = "Project3/Project3-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -296,6 +308,7 @@
 				3FBAF15717C14474009F4094 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
