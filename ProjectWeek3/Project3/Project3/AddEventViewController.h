@@ -9,5 +9,10 @@
 #import <UIKit/UIKit.h>
 
 @interface AddEventViewController : UIViewController
+{
+
+}
+
+-(IBAction)onSave:(id)sender;
 
 @end

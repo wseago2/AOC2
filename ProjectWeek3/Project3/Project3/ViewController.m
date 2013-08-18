@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "AddEventViewController.h"
 
 @interface ViewController ()
 
@@ -26,4 +27,17 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(IBAction)onClick:(id)sender
+{
+    AddEventViewController *viewController = [[AddEventViewController alloc]initWithNibName:@"AddEventView" bundle:nil];
+    if (viewController != nil)
+    {
+        [self presentViewController:viewController animated:YES completion:nil];
+    }
+}
+
+- (void)dealloc {
+    [UIViewController release];
+    [super dealloc];
+}
 @end

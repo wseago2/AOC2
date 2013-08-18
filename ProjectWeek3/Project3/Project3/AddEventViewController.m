@@ -35,4 +35,12 @@
     // Dispose of any resources that can be recreated.
 }
 
+-(IBAction)onSave:(id)sender
+{
+    // onSave method here
+    
+    // dismiss AddEventViewController here
+    [self dismissViewControllerAnimated:TRUE completion:nil];
+}
+
 @end
