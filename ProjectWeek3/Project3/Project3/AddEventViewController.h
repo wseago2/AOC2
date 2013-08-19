@@ -11,8 +11,12 @@
 @interface AddEventViewController : UIViewController
 {
 
+    IBOutlet UITextField *eventText;
 }
 
 -(IBAction)onSave:(id)sender;
+-(IBAction)onCloseKeyboardClick:(id)sender;
+-(IBAction)onChange:(id)sender;
+
 
 @end
