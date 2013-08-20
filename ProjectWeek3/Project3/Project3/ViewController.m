@@ -17,6 +17,8 @@
 
 - (void)viewDidLoad
 {
+    eventTextView.text = @"All the events go here...\n";
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -32,6 +34,7 @@
     AddEventViewController *viewController = [[AddEventViewController alloc]initWithNibName:@"AddEventView" bundle:nil];
     if (viewController != nil)
     {
+        viewController.delegate = self;
         [self presentViewController:viewController animated:YES completion:nil];
     }
 }
@@ -40,4 +43,19 @@
     [UIViewController release];
     [super dealloc];
 }
+
+// delegate method here
+-(void)DidSave:(NSString *)saveEventData saveEventDate:(NSString *)dateString
+{
+    // remove initial text from eventTextView
+    if ([eventTextView.text isEqualToString:@"All the events go here...\n"])
+    {
+        eventTextView.text = [NSString stringWithFormat:@"New Event: %@ \n%@ \n", saveEventData, dateString];
+    }
+    else
+    {
+        eventTextView.text = [eventTextView.text stringByAppendingFormat:@"\n New Event: %@ \n %@ \n", saveEventData, dateString];
+    }
+}
+
 @end

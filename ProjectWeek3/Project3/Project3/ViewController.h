@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AddEventViewController.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <AddEventViewDelegate>
 {
   
+    IBOutlet UITextView *eventTextView;
     
 }
 

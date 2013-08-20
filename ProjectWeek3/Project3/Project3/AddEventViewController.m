@@ -7,12 +7,15 @@
 //
 
 #import "AddEventViewController.h"
+#import "ViewController.h"
 
 @interface AddEventViewController ()
 
 @end
 
 @implementation AddEventViewController
+@synthesize delegate;
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -22,43 +25,34 @@
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
         
         [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+        
     }
     return self;
 }
 
 - (void)viewDidLoad
 {
+    eventDate.minimumDate = [NSDate date];
+//    NSLog(@"Minimum date = %@", eventDate.minimumDate);
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
 
 -(void)keyboardWillShow:(NSNotification *)notification
 {
-    NSLog(@"keyboardWillShow was hit");
+//    NSLog(@"keyboardWillShow was hit");
 }
 
 -(void)keyboardWillHide:(NSNotification *)notification
 {
-    NSLog(@"keyboardWillHide was hit");
+//    NSLog(@"keyboardWillHide was hit");
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
--(IBAction)onSave:(id)sender
-{
-    // onSave method here
-    UIButton *saveButton = (UIButton *)sender;
-    if (saveButton != nil)
-    {
-        NSString *saveString = eventText.text;
-        NSLog(@"%@", saveString);
-    }
-    // dismiss AddEventViewController here
-    [self dismissViewControllerAnimated:TRUE completion:nil];
 }
 
 -(IBAction)onCloseKeyboardClick:(id)sender
@@ -72,14 +66,39 @@
     [super dealloc];
 }
 
+
 -(IBAction)onChange:(id)sender
 {
-    UIDatePicker *datePicker = (UIDatePicker*)sender;
-    if (datePicker != nil)
+    NSLog(@"Current date selection = %@", eventDate.date);
+}
+
+
+-(IBAction)onSave:(id)sender
+{
+    // onSave method here
+    UIButton *saveButton = (UIButton *)sender;
+    if (saveButton != nil)
     {
-        NSLog(@"datePicker value was changed!");
-        NSDate *date = datePicker.date;
-        NSLog(@"date = %@", date.description);
+        // get eventText text
+        NSString *saveEventData = eventText.text;
+        NSLog(@"saveEventData.text = %@", saveEventData);
+        
+        // create string for datePicker value
+        NSString *dateString;
+        
+        // format datePickerValue
+        NSDateFormatter *dateFormatter;
+        dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"MMM dd, YYYY HH:mm:ss a"];
+        dateString = [dateFormatter stringFromDate:eventDate.date];
+        NSLog(@"dateString = %@", dateString);
+        
+        // send values
+        [delegate DidSave:saveEventData saveEventDate:dateString];
+        
+        // close AddEventViewController
+        [self dismissViewControllerAnimated:TRUE completion:nil];
+        
     }
 }
 
