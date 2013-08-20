@@ -34,6 +34,7 @@
     AddEventViewController *viewController = [[AddEventViewController alloc]initWithNibName:@"AddEventView" bundle:nil];
     if (viewController != nil)
     {
+        // set delegate for AddEventViewController here
         viewController.delegate = self;
         [self presentViewController:viewController animated:YES completion:nil];
     }
@@ -54,6 +55,7 @@
     }
     else
     {
+        // append additional events here
         eventTextView.text = [eventTextView.text stringByAppendingFormat:@"\n New Event: %@ \n %@ \n", saveEventData, dateString];
     }
 }

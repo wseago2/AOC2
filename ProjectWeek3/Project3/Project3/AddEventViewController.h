@@ -20,12 +20,14 @@
     IBOutlet UIDatePicker *eventDate;
     NSString *saveDate;
     
+    // make sure it conforms to the protocol
     id<AddEventViewDelegate> delegate;
 }
 
 -(IBAction)onSave:(id)sender;
 -(IBAction)onCloseKeyboardClick:(id)sender;
 -(IBAction)onChange:(id)sender;
+
 @property (strong) id<AddEventViewDelegate> delegate;
 
 
