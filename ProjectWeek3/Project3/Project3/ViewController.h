@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AddEventViewController.h"
 
-@interface ViewController : UIViewController
+// add custom delegate to interface
+@interface ViewController : UIViewController <AddEventViewDelegate>
 {
-  
+    // set outlet for eventTextView
+    IBOutlet UITextView *eventTextView;
     
 }
 

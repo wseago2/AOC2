@@ -8,11 +8,28 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddEventViewController : UIViewController
+@protocol AddEventViewDelegate <NSObject>
+@required
+-(void)DidSave:(NSString*)saveEventData saveEventDate:(NSString*)dateString;
+
+@end
+
+@interface AddEventViewController : UIViewController <UITextFieldDelegate, UIAlertViewDelegate>
 {
 
+    IBOutlet UITextField *eventText;
+    IBOutlet UIDatePicker *eventDate;
+    NSString *saveDate;
+    
+    // make sure it conforms to the protocol
+    id<AddEventViewDelegate> delegate;
 }
 
 -(IBAction)onSave:(id)sender;
+-(IBAction)onCloseKeyboardClick:(id)sender;
+-(IBAction)onChange:(id)sender;
+
+@property (strong) id<AddEventViewDelegate> delegate;
+
 
 @end
