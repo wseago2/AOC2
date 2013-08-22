@@ -113,6 +113,7 @@
     }
 }
 
+// UIAlertViewDelegate tutorial at mobile.tutsplus.com
 -(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
