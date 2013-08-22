@@ -83,22 +83,50 @@
         NSString *saveEventData = eventText.text;
         NSLog(@"saveEventData.text = %@", saveEventData);
         
-        // create string for datePicker value
-        NSString *dateString;
+        if (![eventText.text isEqual: @""])
+        {
+            // create string for datePicker value
+            NSString *dateString;
         
-        // format datePickerValue
-        NSDateFormatter *dateFormatter;
-        dateFormatter = [[NSDateFormatter alloc] init];
-        [dateFormatter setDateFormat:@"MMM dd, YYYY HH:mm:ss a"];
-        dateString = [dateFormatter stringFromDate:eventDate.date];
-        NSLog(@"dateString = %@", dateString);
+            // format datePickerValue
+            NSDateFormatter *dateFormatter;
+            dateFormatter = [[NSDateFormatter alloc] init];
+            [dateFormatter setDateFormat:@"MMM dd, YYYY HH:mm:ss a"];
+            dateString = [dateFormatter stringFromDate:eventDate.date];
+            NSLog(@"dateString = %@", dateString);
         
-        // send values
-        [delegate DidSave:saveEventData saveEventDate:dateString];
+            // send values
+            [delegate DidSave:saveEventData saveEventDate:dateString];
         
-        // close AddEventViewController
+            // close AddEventViewController
+            [self dismissViewControllerAnimated:TRUE completion:nil];
+        } else
+        {
+            UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Event Title Error"
+                                    message:@"You must provide a \ntitle for this event."
+                                    delegate:self
+                                    cancelButtonTitle:@"OK"
+                                    otherButtonTitles:@"Cancel", nil];
+                [message show];
+            }
+        
+    }
+}
+
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
+    
+    if([title isEqualToString:@"OK"])
+    {
+        NSLog(@"You pressed OK.");
+        // pressing ok will close the alert view and allow eventTitle to be changed.
+    }
+    else if ([title isEqualToString:@"Cancel"])
+    {
+        NSLog(@"You pressed Cancel.");
+        // pressing cancel will provide escape hatch and close AddEventViewController.
         [self dismissViewControllerAnimated:TRUE completion:nil];
-        
     }
 }
 

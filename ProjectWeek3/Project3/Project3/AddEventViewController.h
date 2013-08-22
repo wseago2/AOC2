@@ -7,13 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+
 @protocol AddEventViewDelegate <NSObject>
 @required
 -(void)DidSave:(NSString*)saveEventData saveEventDate:(NSString*)dateString;
 
 @end
 
-@interface AddEventViewController : UIViewController <UITextFieldDelegate>
+@interface AddEventViewController : UIViewController <UITextFieldDelegate, UIAlertViewDelegate>
 {
 
     IBOutlet UITextField *eventText;
