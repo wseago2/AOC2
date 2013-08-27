@@ -15,6 +15,8 @@
 
 @implementation ViewController
 
+
+
 -(void) onRightSwipe
 {
     NSLog(@"You swiped right.");
@@ -46,7 +48,10 @@
     // Dispose of any resources that can be recreated.
 }
 
-
+-(IBAction)onSave:(id)sender
+{
+    NSLog(@"You pressed save");
+}
 
 
 @end

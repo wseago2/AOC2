@@ -14,8 +14,8 @@
     
 }
 
+-(IBAction)onSave:(id)sender;
+
 -(void) onRightSwipe;
-
-
 
 @end
