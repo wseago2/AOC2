@@ -46,7 +46,45 @@
 -(void) onLeftSwipe
 {
     NSLog(@"You swiped left.");
-    [self dismissViewControllerAnimated:TRUE completion:nil];
+    // get eventText
+    NSString *saveEventData = eventText.text;
+    
+    if (![eventText.text isEqual: @""])
+    {
+        // get eventDate
+        
+        // save information to singleton
+        
+        // dismiss view controller
+        [self dismissViewControllerAnimated:TRUE completion:nil];
+    }
+    else
+    {
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Event Title Error"
+                                                          message:@"You must provide a \ntitle for this event."
+                                                         delegate:self
+                                                cancelButtonTitle:@"OK"
+                                                otherButtonTitles:@"Cancel", nil];
+        [message show];
+    }
+}
+
+// UIAlertViewDelegate tutorial at mobile.tutsplus.com
+-(void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    NSString *title = [alertView buttonTitleAtIndex:buttonIndex];
+    
+    if ([title isEqualToString:@"OK"])
+    {
+        NSLog(@"You pressed OK.");
+        // pressing ok will close the alert view and allow event title to be changed.
+    }
+    else if ([title isEqualToString:@"Cancel"])
+    {
+        NSLog(@"You pressed Cancel.");
+        // pressing cancel will provide escape hatch and close AddEventViewController.
+        [self dismissViewControllerAnimated:TRUE completion:nil];
+    }
 }
 
 - (void)viewDidLoad

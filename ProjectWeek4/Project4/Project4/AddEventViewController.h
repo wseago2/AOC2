@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddEventViewController : UIViewController <UIGestureRecognizerDelegate>
+@interface AddEventViewController : UIViewController <UIGestureRecognizerDelegate, UIAlertViewDelegate>
 {
     IBOutlet UITextField *eventText;
     IBOutlet UIDatePicker *eventDate;
