@@ -14,6 +14,35 @@
 
 @implementation AddEventViewController
 
+
+-(id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self)
+    {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+        
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillHide:) name:UIKeyboardWillHideNotification object:nil];
+    }
+    return self;
+}
+
+-(void)keyboardWillShow:(NSNotification *)notification
+{
+    NSLog(@"keyboardWillShow was hit");
+}
+
+-(void)keyboardWillHide:(NSNotification *)notification
+{
+    NSLog(@"keyboardWillHide was hit");
+}
+
+-(IBAction)onCloseKeyboardClick:(id)sender
+{
+    NSLog(@"Close keyboard was clicked");
+    [eventText resignFirstResponder];
+}
+
 -(void) onLeftSwipe
 {
     NSLog(@"You swiped left.");

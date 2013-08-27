@@ -10,8 +10,11 @@
 
 @interface AddEventViewController : UIViewController <UIGestureRecognizerDelegate>
 {
-   
+    IBOutlet UITextField *eventText;
+    IBOutlet UIDatePicker *eventDate;
 }
+
+-(IBAction)onCloseKeyboardClick:(id)sender;
 
 -(void) onLeftSwipe;
 @end
