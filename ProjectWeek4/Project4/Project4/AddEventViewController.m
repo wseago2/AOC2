@@ -17,6 +17,7 @@
 -(void) onLeftSwipe
 {
     NSLog(@"You swiped left.");
+    [self dismissViewControllerAnimated:TRUE completion:nil];
 }
 
 - (void)viewDidLoad
