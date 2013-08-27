@@ -18,4 +18,5 @@
 +(SavedEvent*)GetInstance;
 // +(id)sharedSavedEvent;
 
+
 @end
