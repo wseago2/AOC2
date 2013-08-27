@@ -14,12 +14,22 @@
 
 @implementation ViewController
 
+-(void) onRightSwipe
+{
+    NSLog(@"You swiped right.");
+}
+
+
 - (void)viewDidLoad
 {
     
     self.view.backgroundColor = [UIColor whiteColor];
     
-    
+    UISwipeGestureRecognizer *swipeRight = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector (onRightSwipe)];
+    swipeRight.numberOfTouchesRequired = 1;
+    swipeRight.direction = UISwipeGestureRecognizerDirectionRight;
+    [self.view addGestureRecognizer:swipeRight];
+
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 }
@@ -29,5 +39,8 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
+
 
 @end

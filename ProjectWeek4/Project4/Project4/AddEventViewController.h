@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddEventViewController : UIViewController
+@interface AddEventViewController : UIViewController <UIGestureRecognizerDelegate>
 
 @end
