@@ -10,7 +10,7 @@
 
 @interface AddEventViewController : UIViewController <UIGestureRecognizerDelegate>
 {
-    
+   
 }
 
 -(void) onLeftSwipe;

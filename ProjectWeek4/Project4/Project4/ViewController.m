@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "AddEventViewController.h"
 
 @interface ViewController ()
 
@@ -17,6 +18,11 @@
 -(void) onRightSwipe
 {
     NSLog(@"You swiped right.");
+    AddEventViewController *viewController = [[AddEventViewController alloc]initWithNibName:@"AddEventViewController" bundle:nil];
+    if (viewController != nil)
+    {
+        [self presentViewController:viewController animated:YES completion:nil];
+    }
 }
 
 
