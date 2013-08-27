@@ -54,6 +54,8 @@
     
     self.view.backgroundColor = [UIColor whiteColor];
     
+    eventDate.minimumDate = [NSDate date];
+    
     UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector (onLeftSwipe)];
     swipeLeft.numberOfTouchesRequired = 1;
     swipeLeft.direction = UISwipeGestureRecognizerDirectionLeft;
