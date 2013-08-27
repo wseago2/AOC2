@@ -14,10 +14,20 @@
 
 @implementation AddEventViewController
 
+-(void) onLeftSwipe
+{
+    NSLog(@"You swiped left.");
+}
+
 - (void)viewDidLoad
 {
     
     self.view.backgroundColor = [UIColor whiteColor];
+    
+    UISwipeGestureRecognizer *swipeLeft = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector (onLeftSwipe)];
+    swipeLeft.numberOfTouchesRequired = 1;
+    swipeLeft.direction = UISwipeGestureRecognizerDirectionLeft;
+    [self.view addGestureRecognizer:swipeLeft];
     
     
     [super viewDidLoad];
