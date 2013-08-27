@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "AddEventViewController.h"
+#import "SavedEvent.h"
 
 @interface ViewController ()
 
@@ -15,7 +16,7 @@
 
 @implementation ViewController
 
-
+// SavedEvent *sharedSavedEvent = nil;
 
 -(void) onRightSwipe
 {

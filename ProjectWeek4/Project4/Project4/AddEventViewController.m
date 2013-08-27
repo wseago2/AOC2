@@ -7,6 +7,8 @@
 //
 
 #import "AddEventViewController.h"
+#import "SavedEvent.h"
+
 
 @interface AddEventViewController ()
 
@@ -47,11 +49,18 @@
 {
     NSLog(@"You swiped left.");
     // get eventText
-    NSString *saveEventData = eventText.text;
+    // NSString *saveEventData = eventText.text;
     
     if (![eventText.text isEqual: @""])
     {
         // get eventDate
+        NSString *dateString;
+        
+        // format date
+        NSDateFormatter *dateFormatter;
+        dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"MMM dd, YYYY HH:mm:ss a"];
+        dateString = [dateFormatter stringFromDate:eventDate.date];
         
         // save information to singleton
         
