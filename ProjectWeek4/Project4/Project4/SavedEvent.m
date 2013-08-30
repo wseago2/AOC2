@@ -7,8 +7,13 @@
 //
 
 #import "SavedEvent.h"
+#import "ViewController.h"
+#import "AddEventViewController.h"
 
 @implementation SavedEvent
+
+// No longer needed, but for clarity
+@synthesize sharedEventData;
 
 static SavedEvent *_instance = nil;
 
@@ -16,14 +21,16 @@ static SavedEvent *_instance = nil;
 {
     if (_instance == nil)
     {
-        [[self alloc] init];
+        _instance = [[self alloc] init];
     }
+    
     return _instance;
 }
 
--(id)alloc
++(id)alloc
 {
     _instance = [super alloc];
+    
     return _instance;
 }
 
@@ -31,25 +38,20 @@ static SavedEvent *_instance = nil;
 {
     if (self = [super init])
     {
+       // this needs to init with data from userDefaults
         
     }
     return self;
 }
 
-/*
-+(id)sharedSavedEvent
+// method to append data
+-(void)saveUserData:(NSString*)combinedDataString
 {
-    static SavedEvent *sharedSavedEvent = nil;
+    NSLog(@"saveUserData Fired");
+    NSLog(@"Data = %@", combinedDataString);
+    // this needs to append data and save to user defaults
+    // when AddEventViewController is dismissed, ViewController needs to put data from userDefaults in the text view.
     
-    if (sharedSavedEvent == nil)
-    {
-        sharedSavedEvent = [[self alloc] init];
-        
-    }
-    return sharedSavedEvent;
 }
-*/
-
-
 
 @end

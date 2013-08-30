@@ -10,8 +10,7 @@
 
 @interface ViewController : UIViewController <UIGestureRecognizerDelegate>
 {
-    
-    
+    IBOutlet UITextView *savedEvents;
 }
 
 -(IBAction)onSave:(id)sender;

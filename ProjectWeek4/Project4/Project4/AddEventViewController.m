@@ -31,29 +31,30 @@
 
 -(void)keyboardWillShow:(NSNotification *)notification
 {
-    NSLog(@"keyboardWillShow was hit");
+    // NSLog(@"keyboardWillShow was hit");
 }
 
 -(void)keyboardWillHide:(NSNotification *)notification
 {
-    NSLog(@"keyboardWillHide was hit");
+    // NSLog(@"keyboardWillHide was hit");
 }
 
 -(IBAction)onCloseKeyboardClick:(id)sender
 {
-    NSLog(@"Close keyboard was clicked");
+    // NSLog(@"Close keyboard was clicked");
     [eventText resignFirstResponder];
 }
 
 -(void) onLeftSwipe
 {
-    NSLog(@"You swiped left.");
+    // NSLog(@"You swiped left.");
     // get eventText
-    // NSString *saveEventData = eventText.text;
+    NSString *saveEventData = eventText.text;
+    // NSLog(@"Event Data = %@", saveEventData);
     
     if (![eventText.text isEqual: @""])
     {
-        // get eventDate
+        // var to hold date
         NSString *dateString;
         
         // format date
@@ -61,8 +62,16 @@
         dateFormatter = [[NSDateFormatter alloc] init];
         [dateFormatter setDateFormat:@"MMM dd, YYYY HH:mm:ss a"];
         dateString = [dateFormatter stringFromDate:eventDate.date];
+        // NSLog(@"Event Date = %@", dateString);
+        
+        // create a single string
+        NSString *combinedDataString = [NSString stringWithFormat:@"New Event: %@ \n%@", saveEventData, dateString];
+        NSLog(@"My string = %@", combinedDataString);
         
         // save information to singleton
+        SavedEvent* sharedSingleton = [SavedEvent GetInstance];
+        [sharedSingleton saveUserData:combinedDataString];
+      
         
         // dismiss view controller
         [self dismissViewControllerAnimated:TRUE completion:nil];
@@ -85,12 +94,12 @@
     
     if ([title isEqualToString:@"OK"])
     {
-        NSLog(@"You pressed OK.");
+        // NSLog(@"You pressed OK.");
         // pressing ok will close the alert view and allow event title to be changed.
     }
     else if ([title isEqualToString:@"Cancel"])
     {
-        NSLog(@"You pressed Cancel.");
+        // NSLog(@"You pressed Cancel.");
         // pressing cancel will provide escape hatch and close AddEventViewController.
         [self dismissViewControllerAnimated:TRUE completion:nil];
     }

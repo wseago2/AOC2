@@ -7,16 +7,19 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ViewController.h"
+#import "AddEventViewController.h"
 
 @interface SavedEvent : NSObject
 {
-   
+    NSString *sharedEventData;
 }
-@property (nonatomic) NSString *sharedEventTitle;
-@property (nonatomic) NSString *sharedEventDate;
+@property (nonatomic, strong) NSString *sharedEventData;
+
 
 +(SavedEvent*)GetInstance;
-// +(id)sharedSavedEvent;
+
+-(void)saveUserData:(NSString*)combinedDataString;
 
 
 @end
